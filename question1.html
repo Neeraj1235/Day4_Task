@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+</head>
+
+<body>
+    <!-- Compare two JSON have the same properties without order.-->
+
+    <script type="text/javascript">
+        var obj1 = {
+            name: "Person1",
+            age: 5
+        };
+
+        var obj2 = {
+            age: 5,
+            name: "Person1"
+        };
+
+              // JSON.stringify gives false 
+       console.log(JSON.stringify(obj1) == JSON.stringify(obj2))
+
+             // _.isEqual gives true
+        console.log(_.isEqual(obj1, obj2))
+
+    </script>
+
+</body>
+
+</html>
